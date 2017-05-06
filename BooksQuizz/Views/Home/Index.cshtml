@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>BooKs QuuiZZy</h1>
+    <p class="lead">Sprawdź jak dobrze znasz kultowe książki!</p>
+    @*<p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Gra o tron</h2>
+        <p>
+            Uważasz się za fana powieści z serii "Pieśń Lodu i Ognia" George'a R.R. Martina? Wypełnij QuuiZZ i dowiedz się czy to prawda! 
+        </p>
+        <p><a class="btn btn-default" href="@Url.Action("GameOfThrones")">Przejdź do QuuiZZu &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Harry Potter</h2>
+        <p>Świat magii stworzony przez J.K. Rowling nie ma przed Tobą tajemnic? Wypełnij QuuiZZ i przekonaj się jakie jeszcze tajemnice skrywa Hogwart!</p>
+        <p><a class="btn btn-default" href="@Url.Action("Contact")">Przejdź do QuuiZZu &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Władca Pierścieni</h2>
+        <p>Trylogia J.R.R. Tolkiena to Twoja ulubiona pozycja i nie ma rzeczy, których niewiedziałbyś o Śródziemiu? Nasz QuuiZZ pokaże Ci, czy znasz wszystkie jego zakamarki!</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Przejdź do QuuiZZu &raquo;</a></p>
+    </div>
+</div>

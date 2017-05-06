@@ -1,0 +1,34 @@
+﻿<tags>
+  <tag name="Game of Thrones">
+    <questions>
+      <question content="pytanie1 GoT">
+        <answer isValid="true">Answer 1.1</answer>
+        <answer isValid="false">Answer 1.2</answer>
+        <answer isValid="false">Answer 1.3</answer>
+        <answer isValid="false">Answer 1.4</answer>
+      </question>
+      <question content="pytanie2 GoT">
+        <answer isValid="true">Answer 2.1</answer>
+        <answer isValid="false">Answer 2.2</answer>
+        <answer isValid="false">Answer 2.3</answer>
+        <answer isValid="false">Answer 2.4</answer>
+      </question>
+    </questions>
+  </tag>
+  <tag name="Harry Potter">
+    <questions>
+      <question content="pytanie1 HR">
+        <answer isValid="true">Answer 1.1</answer>
+        <answer isValid="false">Answer 1.2</answer>
+        <answer isValid="false">Answer 1.3</answer>
+        <answer isValid="false">Answer 1.4</answer>
+      </question>
+      <question content="pytanie2 HR">
+        <answer isValid="true">Answer 2.1</answer>
+        <answer isValid="false">Answer 2.2</answer>
+        <answer isValid="false">Answer 2.3</answer>
+        <answer isValid="false">Answer 2.4</answer>
+      </question>
+    </questions>
+  </tag>
+</tags>

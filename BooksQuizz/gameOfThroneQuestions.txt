@@ -1,0 +1,10 @@
+1. Pytanie 1;ans a; ans b; ans c;ans d;0;0;0;1
+2. Pytanie 2;ans a; ans b; ans c;ans d;0;0;0;1
+3. Pytanie 3;ans a; ans b; ans c;ans d;0;0;0;1
+4. Pytanie 4;ans a; ans b; ans c;ans d;0;0;0;1
+5. Pytanie 5;ans a; ans b; ans c;ans d;0;0;0;1
+6. Pytanie 6;ans a; ans b; ans c;ans d;0;0;0;1
+7. Pytanie 7;ans a; ans b; ans c;ans d;0;0;0;1
+8. Pytanie 8;ans a; ans b; ans c;ans d;0;0;0;1
+9. Pytanie 9;ans a; ans b; ans c;ans d;0;0;0;1
+10. Pytanie 10;ans a; ans b; ans c;ans d;0;0;0;1

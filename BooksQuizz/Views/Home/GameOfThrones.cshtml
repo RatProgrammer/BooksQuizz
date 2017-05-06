@@ -1,0 +1,36 @@
+﻿@using BooksQuizz.Models.Quiz
+@model BooksQuizz.Models.QuizModel
+
+@{
+    ViewBag.Title = "GameOfThrones";
+}
+
+<body>
+<h1>@ViewBag.Message</h1>
+
+<h3>Sprawdź jak dobrze znasz Grę o Tron!</h3>
+
+@{
+    QuestionsContainer questionsContainer = @ViewBag.Questions;
+}
+
+    @foreach (var question in questionsContainer.Question)
+    {
+
+        <h3>
+            <b>@question.Content</b>
+        </h3>
+            foreach (var answer in question.Answers)
+            {
+                <p>
+                    <label><input type="checkbox" index="i"> @answer.ToString()</label>
+                </p>
+            }
+    }
+    
+            <h3>
+
+                <input type="submit" value="Zakończ!" />
+            </h3>
+            
+</body>
