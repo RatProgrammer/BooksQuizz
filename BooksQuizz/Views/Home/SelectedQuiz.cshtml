@@ -5,31 +5,36 @@
 }
 
 <body>
-<h1>@ViewBag.Message</h1>
-    
-    @using (Html.BeginForm("CheckQuiz", "Home", FormMethod.Post))
-    {
-        var questionsList = Model.Questions;
-        for (int i = 0; i < questionsList.Count; i++)
-        {
-            <div>
-                @Html.DisplayTextFor(x => x.Questions[i].Text)
-                @{
-                    var answers = questionsList[i].Answers;
-                    for (int j = 0; j < answers.Count; j++)
-                    {
-                        <div>
-                            <label>
-                                @Html.CheckBoxFor(x => x.Questions[i].Answers[j].IsSelected)
-                                @Html.DisplayTextFor(x => x.Questions[i].Answers[j].Text)
-                            </label>
-                            @Html.HiddenFor(x => x.Questions[i].Answers[j].Text)
-                        </div>
-                    }
-                }
-            </div>
-        }
+    <div class="jumbotron">
+        <h1>@ViewBag.Message</h1>
+        <p class="lead">Przed sobą masz test wielokrotnego wyboru. Za każdą poprawną odpowiedź otrzymasz +1 punkt. Ale pamiętaj, każda błędna odpowiedź to -1 punkt!</p>
+        <h3>POWODZENIA!</h3>
+    </div>
 
-        <input type="submit" value="Submit"/>
-    }            
+
+@using (Html.BeginForm("CheckQuiz", "Home", FormMethod.Post))
+{
+    var questionsList = Model.Questions;
+    for (int i = 0; i < questionsList.Count; i++)
+    {
+        <div>
+            <h4>@Html.DisplayTextFor(x => x.Questions[i].Text)</h4>
+            @{
+                var answers = questionsList[i].Answers;
+                for (int j = 0; j < answers.Count; j++)
+                {
+                    <div>
+                        <label>
+                            @Html.CheckBoxFor(x => x.Questions[i].Answers[j].IsSelected)
+                            @Html.DisplayTextFor(x => x.Questions[i].Answers[j].Text)
+                        </label>
+                        @Html.HiddenFor(x => x.Questions[i].Answers[j].Text)
+                    </div>
+                }
+            }
+        </div>
+    }
+
+    <input type="submit" value="Sprawdź!"/>
+}
 </body>

@@ -34,6 +34,7 @@ namespace BooksQuizz.Controllers
             return View(quizViewModel);
         }
 
+
         [HttpPost]
         public ActionResult CheckQuiz(QuizViewModel model)
         {
@@ -48,11 +49,18 @@ namespace BooksQuizz.Controllers
 
         private static int GetResult(QuizViewModel model, Quiz quiz)
         {
-            return model.Questions
+            int rightAnswers = model.Questions
                 .Select((question, i) => question.Answers
                     .Where((answer, j) => answer.IsSelected == true && quiz.QuestionsContainer.Questions[i].Answers[j].IsValid)
                     .Count())
                     .Sum();
+            int badAnswers = model.Questions
+                .Select((question, i) => question.Answers
+                    .Where((answer, j) => answer.IsSelected == true && quiz.QuestionsContainer.Questions[i].Answers[j].IsValid==false)
+                    .Count())
+                    .Sum();
+
+            return rightAnswers - badAnswers;
         }
     }
 }

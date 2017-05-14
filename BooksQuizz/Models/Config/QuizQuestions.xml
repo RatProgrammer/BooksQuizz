@@ -2,17 +2,65 @@
   <quizz name="Gra o Tron">
     <description>Uważasz się za fana powieści z serii "Pieśń Lodu i Ognia" George'a R.R. Martina? Wypełnij QuuiZZ i dowiedz się czy to prawda!</description>
     <questions>
-      <question content="pytanie1 GoT">
-        <answer isValid="true">Answer 1.1</answer>
-        <answer isValid="false">Answer 1.2</answer>
-        <answer isValid="false">Answer 1.3</answer>
-        <answer isValid="false">Answer 1.4</answer>
+      <question content="1. W jakim miejscu zaczyna sie powieść?">
+        <answer isValid="true">Wintefell</answer>
+        <answer isValid="false">Lannisport</answer>
+        <answer isValid="false">Królewska przystań</answer>
+        <answer isValid="false">Orle ogniazdo</answer>
       </question>
-      <question content="pytanie2 GoT">
-        <answer isValid="true">Answer 2.1</answer>
-        <answer isValid="false">Answer 2.2</answer>
-        <answer isValid="false">Answer 2.3</answer>
-        <answer isValid="false">Answer 2.4</answer>
+      <question content="2. Które miejsce zostało zniszczone przez smoczy ogień?">
+        <answer isValid="false">Winterfell</answer>
+        <answer isValid="true">Harrenhall</answer>
+        <answer isValid="false">Casterly Rock</answer>
+        <answer isValid="false">Tyrosh</answer>
+      </question>
+      <question content="3. Jak sie nazywała córka od Neda Starka?">
+        <answer isValid="false">Cersei</answer>
+        <answer isValid="true">Sansa</answer>
+        <answer isValid="false">Daenerys</answer>
+        <answer isValid="true">Arya</answer>
+      </question>
+      <question content="4. Jak nazywały się smoki od Smoczej Matki?">
+        <answer isValid="true">Drogon</answer>
+        <answer isValid="true">Rhaegal</answer>
+        <answer isValid="true">Viserion</answer>
+        <answer isValid="false">Viserys</answer>
+      </question>
+      <question content="5. w jakim miejscu urodziła się Catelyn Stark? ">
+        <answer isValid="false">Winterfell</answer>
+        <answer isValid="true">Riverun</answer>
+        <answer isValid="false">Bliźniaki</answer>
+        <answer isValid="false">Koniec Burzy</answer>
+      </question>
+      <question content="6. Ile dzieci miała Cersei Lannister?">
+        <answer isValid="false">1</answer>
+        <answer isValid="false">2</answer>
+        <answer isValid="true">3</answer>
+        <answer isValid="false">4</answer>
+      </question>
+      <question content="7. Kim był Mance Rayder?">
+        <answer isValid="true">Bratem z Nocnej Straży</answer>
+        <answer isValid="true">Królem za Murem</answer>
+        <answer isValid="true">Dzikim</answer>
+        <answer isValid="false">Poddanym Starków</answer>
+      </question>
+      <question content="8. Dewiza rodu Martellów to:">
+        <answer isValid="false">Usłysz mój ryk</answer>
+        <answer isValid="true">Niezachwiani, nieugięci, niezłomni</answer>
+        <answer isValid="false">Rodzina, obowiązek, honor</answer>
+        <answer isValid="false">My nie siejemy</answer>
+      </question>
+      <question content="9. Kim była Missandei?">
+        <answer isValid="false">Poddaną Cersei Lannister</answer>
+        <answer isValid="true">Poddaną Daenerys Targaryen</answer>
+        <answer isValid="false">Księżniczką Dorne</answer>
+        <answer isValid="false">Matką smoków</answer>
+      </question>
+      <question content="10. Kim był Jon Snow?">
+        <answer isValid="true">Bratem Nocnej Straży</answer>
+        <answer isValid="true">Dzikim</answer>
+        <answer isValid="true">Bękartem Starków</answer>
+        <answer isValid="false">Królem Północy</answer>
       </question>
     </questions>
   </quizz>
