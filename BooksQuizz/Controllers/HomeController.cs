@@ -1,50 +1,58 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Linq;
 using System.Web.Mvc;
 using BooksQuizz.Models;
-using BooksQuizz.Models.Quiz;
+using BooksQuizz.Models.Mappers;
+using BooksQuizz.Models.Quizzes;
+using BooksQuizz.ViewModel;
+
 
 namespace BooksQuizz.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly QuizModel _quizModel;
+        public HomeController()
+        { 
+            _quizModel = new QuizModel();
+            _quizModel.LoadQuestions();
+        }
+        
         public ActionResult Index()
         {
-            //GameOfThronesModel gameOfThronesModel = new GameOfThronesModel();
-            //gameOfThronesModel.LoadQuestions();
-            //ViewBag.Question = gameOfThronesModel.AnswerA;
-            return View();
+            var homeViewModel = HomeMapper.Map(_quizModel.QuizzesContainer);
+            Session.Add("Quiz", homeViewModel);
+
+            return View(homeViewModel);
         }
 
-        public ActionResult About()
+        public ActionResult SelectedQuiz(int id)
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult GameOfThrones()
-        {
-            ViewBag.Message = "Game of Thrones QuuiZZy";
-            
-            QuizModel quizModel = new QuizModel();
-            quizModel.LoadQuestions();
-            Tag gameOfThronesTag = quizModel.TagsContainer.Tag.FirstOrDefault(x => x.Name.Equals("Game of Thrones"));
-            //ViewBag.Questions = gameOfThronesTag?.Questions.Question.Select(x => x.Content).ToList();
-            ViewBag.Questions = gameOfThronesTag?.QuestionsContainer;
-            //ViewBag.Answers = gameOfThronesTag?.Questions.Question.Select(x => x.Answer).ToList();
-            return View();
+            Quiz quiz = _quizModel.QuizzesContainer.Quizzes[id];
+            ViewBag.Message = quiz.Name;
+            Session.Add("Quiz", quiz);
+            var quizViewModel = QuizMapper.Map(quiz);
+            return View(quizViewModel);
         }
 
         [HttpPost]
-        [AllowAnonymous]
-        [ValidateAntiForgeryToken]
-        public ActionResult GameOfThrones(QuizModel model)
+        public ActionResult CheckQuiz(QuizViewModel model)
         {
+            var quiz = Session["Quiz"] as Quiz;
+
+            var result = GetResult(model, quiz);
+
+            ViewBag.Result = result;
 
             return View();
+        }
+
+        private static int GetResult(QuizViewModel model, Quiz quiz)
+        {
+            return model.Questions
+                .Select((question, i) => question.Answers
+                    .Where((answer, j) => answer.IsSelected == true && quiz.QuestionsContainer.Questions[i].Answers[j].IsValid)
+                    .Count())
+                    .Sum();
         }
     }
 }

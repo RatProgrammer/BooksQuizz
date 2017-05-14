@@ -1,16 +1,14 @@
-﻿using System;
-using System.IO;
-using System.Xml;
+﻿using System.IO;
 using System.Xml.Serialization;
 
 namespace BooksQuizz.Models.Serialization
 {
     public class XmlSerializator
     {
-        public static T ReadXml<T>(String xmlFile)
+        public static T ReadXml<T>(string xmlFile)
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(T));
-            StreamReader streamReader = new StreamReader(xmlFile);
+            var serializer = new XmlSerializer(typeof(T));
+            var streamReader = new StreamReader(xmlFile);
             return (T) serializer.Deserialize(streamReader);
         }
     }

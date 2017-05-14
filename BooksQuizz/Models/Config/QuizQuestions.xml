@@ -1,5 +1,6 @@
-﻿<tags>
-  <tag name="Game of Thrones">
+﻿<quizzes>
+  <quizz name="Gra o Tron">
+    <description>Uważasz się za fana powieści z serii "Pieśń Lodu i Ognia" George'a R.R. Martina? Wypełnij QuuiZZ i dowiedz się czy to prawda!</description>
     <questions>
       <question content="pytanie1 GoT">
         <answer isValid="true">Answer 1.1</answer>
@@ -14,8 +15,9 @@
         <answer isValid="false">Answer 2.4</answer>
       </question>
     </questions>
-  </tag>
-  <tag name="Harry Potter">
+  </quizz>
+  <quizz name="Harry Potter">
+    <description>Świat magii stworzony przez J.K. Rowling nie ma przed Tobą tajemnic? Wypełnij QuuiZZ i przekonaj się jakie jeszcze tajemnice skrywa Hogwart!</description>
     <questions>
       <question content="pytanie1 HR">
         <answer isValid="true">Answer 1.1</answer>
@@ -30,5 +32,57 @@
         <answer isValid="false">Answer 2.4</answer>
       </question>
     </questions>
-  </tag>
-</tags>
+  </quizz>
+  <quizz name="Władca Pierścieni">
+    <description>Trylogia J.R.R. Tolkiena to Twoja ulubiona pozycja i nie ma rzeczy, których niewiedziałbyś o Śródziemiu? Nasz QuuiZZ pokaże Ci, czy znasz wszystkie jego zakamarki!</description>
+    <questions>
+      <question content="pytanie1 WP">
+        <answer isValid="true">Answer 1.1</answer>
+        <answer isValid="false">Answer 1.2</answer>
+        <answer isValid="false">Answer 1.3</answer>
+        <answer isValid="false">Answer 1.4</answer>
+      </question>
+      <question content="pytanie2 WP">
+        <answer isValid="true">Answer 2.1</answer>
+        <answer isValid="false">Answer 2.2</answer>
+        <answer isValid="false">Answer 2.3</answer>
+        <answer isValid="false">Answer 2.4</answer>
+      </question>
+    </questions>
+  </quizz>
+
+  <quizz name="Władca Pierścieni 2">
+    <description>Trylogia J.R.R. Tolkiena to Twoja ulubiona pozycja i nie ma rzeczy, których niewiedziałbyś o Śródziemiu? Nasz QuuiZZ pokaże Ci, czy znasz wszystkie jego zakamarki!</description>
+    <questions>
+      <question content="pytanie1 WP">
+        <answer isValid="true">Answer 1.1</answer>
+        <answer isValid="false">Answer 1.2</answer>
+        <answer isValid="false">Answer 1.3</answer>
+        <answer isValid="false">Answer 1.4</answer>
+      </question>
+      <question content="pytanie2 WP">
+        <answer isValid="true">Answer 2.1</answer>
+        <answer isValid="false">Answer 2.2</answer>
+        <answer isValid="false">Answer 2.3</answer>
+        <answer isValid="false">Answer 2.4</answer>
+      </question>
+    </questions>
+  </quizz>
+  <quizz name="Władca Pierścieni 3">
+    <description>Trylogia J.R.R. Tolkiena to Twoja ulubiona pozycja i nie ma rzeczy, których niewiedziałbyś o Śródziemiu? Nasz QuuiZZ pokaże Ci, czy znasz wszystkie jego zakamarki!</description>
+    <questions>
+      <question content="pytanie1 WP">
+        <answer isValid="true">Answer 1.1</answer>
+        <answer isValid="false">Answer 1.2</answer>
+        <answer isValid="false">Answer 1.3</answer>
+        <answer isValid="false">Answer 1.4</answer>
+      </question>
+      <question content="pytanie2 WP">
+        <answer isValid="true">Answer 2.1</answer>
+        <answer isValid="false">Answer 2.2</answer>
+        <answer isValid="false">Answer 2.3</answer>
+        <answer isValid="false">Answer 2.4</answer>
+      </question>
+    </questions>
+  </quizz>
+</quizzes>

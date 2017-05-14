@@ -1,0 +1,35 @@
+﻿@model BooksQuizz.ViewModel.QuizViewModel
+
+@{
+    ViewBag.Title = "Quiz";
+}
+
+<body>
+<h1>@ViewBag.Message</h1>
+    
+    @using (Html.BeginForm("CheckQuiz", "Home", FormMethod.Post))
+    {
+        var questionsList = Model.Questions;
+        for (int i = 0; i < questionsList.Count; i++)
+        {
+            <div>
+                @Html.DisplayTextFor(x => x.Questions[i].Text)
+                @{
+                    var answers = questionsList[i].Answers;
+                    for (int j = 0; j < answers.Count; j++)
+                    {
+                        <div>
+                            <label>
+                                @Html.CheckBoxFor(x => x.Questions[i].Answers[j].IsSelected)
+                                @Html.DisplayTextFor(x => x.Questions[i].Answers[j].Text)
+                            </label>
+                            @Html.HiddenFor(x => x.Questions[i].Answers[j].Text)
+                        </div>
+                    }
+                }
+            </div>
+        }
+
+        <input type="submit" value="Submit"/>
+    }            
+</body>
